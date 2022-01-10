@@ -1,6 +1,25 @@
 ## Curriculum Vitae
 
-Jimmy is --- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.---
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Research_Student:
+    def __init__(self):
+        self.name = "Voravich Chaturavichanan"
+        self.nickname = "Jimmy"
+        self.role = "Student"
+        self.nationality = "Thai"
+        self.language = ["Python", "R", "SQL"]
+        self.interest = ["Data Science", "Cognitive Psychology", "Causal Statistics"]
+
+def main():
+    me = Research_Student()
+
+if __name__ == "__main__":
+    main()
+```
+
 
 ### Education
 
