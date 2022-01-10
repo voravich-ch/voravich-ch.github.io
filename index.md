@@ -1,25 +1,6 @@
 ## Curriculum Vitae
 
-```python
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-
-class Research_Student:
-    def __init__(self):
-        self.name = "Voravich Chaturavichanan"
-        self.nickname = "Jimmy"
-        self.role = "Student"
-        self.nationality = "Thai"
-        self.language = ["Python", "R", "SQL"]
-        self.interest = ["Data Science", "Cognitive Psychology", "Causal Statistics"]
-
-def main():
-    me = Research_Student()
-
-if __name__ == "__main__":
-    main()
-```
-
+TBC
 
 ### Education
 - Bayes Business School, London, United Kingdom (2020 - 2021)
