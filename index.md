@@ -4,9 +4,9 @@ TBC
 
 ### Education
 - **Bayes Business School, London, United Kingdom (Sept 2020 - Sept 2021)**
-    -  MSc Business Analytics (Distinction)
+    -  MSc Business Analytics (Distinction): 79.33
 - **Tokyo International University, Saitama, Japan (Sept 2016 - Aug 2019)**
-    -  BA Economics (Top GPA, Early Graduation)
+    -  BA Economics (Top GPA, Early Graduation): GPA 3.794/4.000
 
 ### Experience
 - **Research Assistance at [Bayes Business School](https://www.bayes.city.ac.uk/)<br>London, United Kingdom (Oct 2021 - Present)**
