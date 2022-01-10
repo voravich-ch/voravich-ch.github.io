@@ -3,39 +3,28 @@
 TBC
 
 ### Education
-- Bayes Business School, London, United Kingdom (2020 - 2021)
+- **Bayes Business School, London, United Kingdom (Sept 2020 - Sept 2021)**
     -  MSc Business Analytics (Distinction)
--  Tokyo International University, Saitama, Japan (2016 - 2019)
+- **Tokyo International University, Saitama, Japan (Sept 2016 - Aug 2019)**
     -  BA Economics (Top GPA, Early Graduation)
 
 ### Experience
-- 
+- **Research Assistance at [Bayes Business School](https://www.bayes.city.ac.uk/), London, United Kingdom (Oct 2021 - Present)**
+    - Conducted research to explain the cognitive processes through product review data using natural language processing.
+    - Crawled and preprocessed data from multiple platforms in the movie, food, and music industries, for further analyses.
+- **Data Scientist Intern at [Wongnai Media](https://www.wongnai.com/about?locale=en), Bangkok, Thailand (Feb 2020 - Jun 2020)**
+    - Conceived and developed a computer vision model (CNN-Based) to classify and label food images.
+    - Developed a personalized recommender system for the application to deliver users recommended restaurants using a collaborative filtering algorithm.
+    - Created a denormalized table using SQL to optimize the performance of a KPI dashboard via Metabase.
+- **Business & Integration Arch Analyst at [Accenture](https://www.accenture.com/th-en), Bangkok, Thailand (Jan 2020 - Feb 2020)**
+    - Coordinated with the client and designed the product verification testing scenarios for application deployment.
+    - Developed the product verification test scenarios, briefed the details to the team and presented it to the managers.
+- **Foreign Exchange Analyst Intern at [Bank of Thailand](https://www.bot.or.th/English/Pages/default.aspx), Bangkok, Thailand (Jan 2019 - Feb 2019)**
+    - Conducted research on factors behind Thai Baht (THB) outperformance among regional currencies using a multifactor model.
 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/voravich-ch/test/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### IT Skills
+Python, R, SQL, PSQL, MongoDB, Excel, Tableau, Tensorflow, Scrapy, Cloud (AWS, GCP), Linux, Git
+ 
+### Languages
+**Thai** (Native), **English** (Business), **Japanese** (Conversational)
