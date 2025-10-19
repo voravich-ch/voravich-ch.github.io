@@ -19,6 +19,7 @@
 
 **Bank of Thailand**, Thailand  
 **Senior Analyst – Financial Stability Department** 
+
 *(Nov 2022 – Jul 2025)* — Promoted in July 2025  
 - Monitored systemically important corporations to detect early signs of financial stress and engaged with banks and corporates to prevent systemic spillovers.  
 - Investigated financial events and identified transmission linkages threatening Thailand’s financial stability, generating actionable insights for policy.  
