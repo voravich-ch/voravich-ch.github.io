@@ -1,3 +1,11 @@
+---
+layout: default
+permalink: /legacy/
+noindex: true
+---
+
+> *Previous version of this site. [← Back to current](/)*
+
 ## Resume
 
 ---

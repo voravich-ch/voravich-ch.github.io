@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voravich Chaturavichanan — Finance, Quant &amp; Data Science</title>
+<meta name="description" content="Finance, quantitative research, and data science, with a macro lens from central-bank work. MSc Economics (NUS) candidate, graduating Dec 2026 · Singapore.">
+<!--
+  DRAFT full-site restyle for voravich-ch.github.io — navy system matching the resume.
+  Choices made (veto any): no emoji section headers; profile photo kept; Projects
+  featured but CONFIDENTIALITY-SAFE (no results/code/links). [DRAFT] copy = your sign-off.
+  Profile image uses the absolute URL so it renders in preview; switch to "images/new_profile.jpg"
+  (relative) when you deploy into your repo.
+-->
+<style>
+  :root { --accent:#1c3d5a; --ink:#1a1a1a; --muted:#5a6573; --line:#e3e7ec; --chip:#eef2f6; --bg:#f7f8fa; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  html { scroll-behavior:smooth; }
+  .wrap { max-width:1180px; margin:0 auto; background:#fff; padding:40px 44px; }
+  .layout { display:grid; grid-template-columns:280px 1fr; gap:46px; align-items:start; }
+  .main { min-width:0; }
+  .main > :first-child { margin-top:0; }
+  /* Sidebar */
+  .sidebar { position:sticky; top:34px; text-align:center; border-right:1px solid var(--line); padding-right:30px; }
+  .sidebar img { width:128px; height:128px; border-radius:50%; object-fit:cover; border:2px solid var(--accent); }
+  h1 { font-family:Georgia,serif; font-size:23px; color:var(--accent); letter-spacing:.4px; margin-top:14px; line-height:1.2; }
+  .tagline { font-size:12.5px; color:var(--muted); margin-top:8px; font-style:italic; line-height:1.45; }
+  .contact { margin-top:14px; display:flex; flex-direction:column; gap:7px; }
+  .contact a { font-size:12px; text-decoration:none; color:var(--accent); border:1px solid #d4dbe3; border-radius:6px; padding:6px 10px; }
+  .contact a:hover { background:var(--chip); }
+  .nav { margin-top:18px; display:flex; flex-direction:column; gap:2px; border-top:1px solid var(--line); padding-top:14px; }
+  .nav a { font-size:12.5px; text-decoration:none; color:var(--muted); padding:5px 8px; border-radius:6px; }
+  .nav a:hover { color:var(--accent); background:var(--chip); }
+  /* Sections */
+  section { margin-top:30px; }
+  h2 { font-family:Georgia,serif; font-size:18px; color:var(--accent); letter-spacing:.5px; border-bottom:1.5px solid var(--accent); padding-bottom:6px; margin-bottom:14px; }
+  .entry { margin-bottom:16px; }
+  .erow { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .org { font-weight:700; font-size:14.5px; }
+  .loc { color:var(--muted); font-weight:400; font-size:12.5px; }
+  .date { color:var(--muted); font-size:12.5px; white-space:nowrap; }
+  .role { font-style:italic; color:#333; font-size:13.5px; margin-bottom:4px; }
+  ul { margin:4px 0 0 18px; }
+  ul li { font-size:13px; margin-bottom:3px; }
+  .award { color:var(--accent); font-weight:700; }
+  .cw { color:var(--muted); font-size:12.5px; margin-top:2px; }
+  /* Projects */
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .card { border:1px solid var(--line); border-radius:10px; padding:16px; display:flex; flex-direction:column; background:#fff; }
+  .card-top { display:flex; justify-content:space-between; align-items:center; }
+  .card h3 { font-size:15.5px; color:var(--accent); }
+  .lock { font-size:9.5px; font-weight:700; color:var(--accent); background:var(--chip); border:1px solid #d4dbe3; border-radius:20px; padding:2px 9px; }
+  .ptag { font-size:12px; font-style:italic; color:var(--muted); margin:3px 0 8px; }
+  .card p.desc { font-size:12.5px; margin-bottom:10px; }
+  .draft { color:#b25b00; font-weight:600; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:11px; }
+  .chip { font-size:10px; background:var(--chip); color:#3a4654; border-radius:5px; padding:3px 8px; }
+  .pnote { margin-top:auto; font-size:10.5px; color:var(--muted); border-top:1px dashed var(--line); padding-top:8px; }
+  /* Skills */
+  .skills p { font-size:13px; margin-bottom:5px; }
+  .skills .lbl { font-weight:700; }
+  .about { margin-top:24px; font-size:14px; color:#2a2f36; line-height:1.62; }
+  .about .lead { font-weight:700; color:var(--accent); }
+  .deepdive { margin-top:22px; }
+  .deepdive h4 { font-size:12.5px; color:var(--accent); font-weight:700; letter-spacing:.4px; text-transform:uppercase; margin-bottom:10px; }
+  .diagram { border:1px solid var(--line); border-radius:10px; padding:16px 14px; background:#fff; }
+  .diagram svg { width:100%; height:auto; display:block; }
+  .demonstrates { margin:13px 0 0 18px; }
+  .demonstrates li { font-size:12.5px; margin-bottom:4px; }
+  .demonstrates b { color:var(--accent); }
+  .notes .post { border-left:3px solid var(--accent); padding:2px 0 2px 15px; }
+  .notes .post h3 { font-size:14.5px; color:var(--accent); }
+  .notes .post .meta { font-size:11px; color:var(--muted); margin:2px 0 8px; }
+  .notes .post p { font-size:13px; margin-bottom:8px; }
+  .notes .post .more { font-size:12px; font-style:italic; color:var(--muted); }
+  footer { margin-top:30px; border-top:1px solid var(--line); padding-top:12px; font-size:11px; color:var(--muted); text-align:center; }
+  @media (max-width:760px){
+    .wrap{ padding:26px 20px; }
+    .layout{ grid-template-columns:1fr; gap:22px; }
+    .sidebar{ position:static; border-right:none; padding-right:0; border-bottom:2px solid var(--accent); padding-bottom:20px; }
+    .nav{ display:none; }
+    .erow{ flex-direction:column; }
+    .grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="layout">
+    <aside class="sidebar">
+      <img src="images/new_profile.jpg" alt="Voravich Chaturavichanan">
+      <h1>Voravich Chaturavichanan</h1>
+      <div class="tagline">Economics · Quantitative Research · Financial Markets<br>MSc Economics (NUS), graduating Dec 2026 · Singapore</div>
+      <div class="contact">
+        <a href="mailto:voravich.ch@gmail.com">voravich.ch@gmail.com</a>
+        <a href="https://www.linkedin.com/in/voravich-ch/">LinkedIn</a>
+        <a href="https://github.com/voravich-ch">GitHub</a>
+      </div>
+      <nav class="nav">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#notes">Notes</a>
+      </nav>
+    </aside>
+    <main class="main">
+
+    <div class="about">
+    <p><span class="lead">I work at the intersection of finance, quantitative analysis, and data science,</span> with a <span class="lead">macro</span> lens built inside a central bank. At the Bank of Thailand's Financial Stability Department, I learned to reason about how shocks transmit through the financial system and how policy responds — on analysis that reached senior decision-makers. My background in data science and analytics taught me to build models from messy, real-world data; and in my own projects, I build systematic trading and research systems end to end, turning a market view into a tested signal and the infrastructure that runs it.</p>
+  </div>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="erow"><span class="org">Bank of Thailand <span class="loc">— Thailand</span></span><span class="date">Nov 2022 – Jul 2025</span></div>
+      <div class="role">Senior Analyst, Financial Stability Department (promoted Jul 2025)</div>
+      <ul>
+        <li>Monitored a portfolio of systemically important corporates to detect early signs of financial stress, engaging banks and corporates to prevent systemic spillovers</li>
+        <li>Investigated financial events and traced transmission linkages threatening Thailand's financial stability, producing insights that informed supervisory and policy discussions up to the Deputy Governor (Financial Institutions Stability)</li>
+        <li>Designed a suite of forward-looking risk indicators (liquidity, leverage, performance) using statistical and machine-learning methods, generating early-warning signals for senior management</li>
+        <li>Re-engineered a multi-day manual reporting workflow into a one-click automated Python/Excel pipeline (LET, FILTER, VBA), cutting turnaround from days to a single batch run; won the <span class="award">Governor's Award for Innovation</span></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="erow"><span class="org">Bayes Business School <span class="loc">— United Kingdom</span></span><span class="date">Oct 2021 – Sep 2022</span></div>
+      <div class="role">Research Assistant to Dr. Simone Santoni, Strategy Group</div>
+      <ul>
+        <li>Applied NLP to product-review data to analyze cognitive processes, contributing insights on consumer behavior toward cultural-product evaluation</li>
+        <li>Built data crawlers across 11 platforms to assemble a comprehensive user-and-product dataset, expanding the group's research capabilities</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="erow"><span class="org">LINE MAN Wongnai <span class="loc">— Thailand</span></span><span class="date">Feb 2020 – Jun 2020</span></div>
+      <div class="role">Data Scientist Intern</div>
+      <ul>
+        <li>Developed a CNN computer-vision model to classify food images, doubling the number of classes and lifting F1-score 5% over the incumbent model</li>
+        <li>Built a collaborative-filtering recommender for restaurant recommendations that outperformed the existing model and was deployed to production</li>
+        <li>Optimized KPI dashboards with denormalized SQL tables, materially cutting the compute cost of complex metric calculations</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="erow"><span class="org">Bank of Thailand <span class="loc">— Thailand</span></span><span class="date">Jan 2019 – Feb 2019</span></div>
+      <div class="role">Foreign Exchange Analyst Intern</div>
+      <ul>
+        <li>Researched Thai Baht outperformance vs. regional currencies with multiple regression, finding evidence of safe-haven characteristics that supported capital-flow management policy</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top"><h3>TradeAssistant</h3><span class="lock">🔒 Proprietary</span></div>
+        <div class="ptag">A self-built systematic trading stack for FX &amp; gold — research through gated auto-execution</div>
+        <p class="desc">An end-to-end pipeline: automated daily data refresh (broker feeds + point-in-time macro vintages), alpha/timing/risk models validated with walk-forward and transaction-cost stress tests, and an automated LLM "economist" review. Execution runs from human-reviewed decision support through to risk-gated automatic execution via an MT5 Expert Advisor with hard loss limits, with a Telegram bot for daily digests and a remote STOP/RESUME kill-switch. The live stack runs unattended on a VPS.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Telegram bot</span><span class="chip">VPS</span><span class="chip">Streamlit</span></div>
+        <div class="pnote">Built to trade the user's own capital — signals, parameters, and performance withheld.</div>
+      </div>
+      <div class="card">
+        <div class="card-top"><h3>EquityAssistant</h3><span class="lock">🔒 Proprietary</span></div>
+        <div class="ptag">A long-only ETF portfolio assistant with staged, gated execution</div>
+        <p class="desc">A personal portfolio system on Interactive Brokers built as a staged on-ramp — generated order sheets with manual paper execution, read-only reconciliation, then gated API execution. Includes a portfolio "lab" dashboard for allocation, rebalancing, turnover-cost modeling, and data-quality monitoring, behind explicit, staged execution gates.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">IBKR API</span><span class="chip">pandas</span><span class="chip">Streamlit</span></div>
+        <div class="pnote">Personal portfolio tool — holdings and methodology not disclosed.</div>
+      </div>
+    </div>
+
+    <div class="deepdive">
+      <h4>TradeAssistant — system architecture</h4>
+      <div class="diagram">
+        <svg viewBox="0 0 760 530" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif" role="img" aria-label="TradeAssistant pipeline: data, research and modeling, validation, review and decision, gated execution">
+          <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1c3d5a"/></marker></defs>
+
+          <rect x="120" y="16" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
+          <circle cx="152" cy="53" r="14" fill="#1c3d5a"/><text x="152" y="58" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">1</text>
+          <text x="182" y="49" fill="#1c3d5a" font-size="14.5" font-weight="700">Data</text>
+          <text x="182" y="71" fill="#5a6573" font-size="11">market-data feeds + point-in-time macro vintages</text>
+          <line x1="380" y1="92" x2="380" y2="120" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
+
+          <rect x="120" y="122" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
+          <circle cx="152" cy="159" r="14" fill="#1c3d5a"/><text x="152" y="164" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">2</text>
+          <text x="182" y="155" fill="#1c3d5a" font-size="14.5" font-weight="700">Research &amp; modeling</text>
+          <text x="182" y="177" fill="#5a6573" font-size="11">feature engineering · alpha, timing &amp; risk models</text>
+          <line x1="380" y1="198" x2="380" y2="226" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
+
+          <rect x="120" y="228" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
+          <circle cx="152" cy="265" r="14" fill="#1c3d5a"/><text x="152" y="270" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">3</text>
+          <text x="182" y="261" fill="#1c3d5a" font-size="14.5" font-weight="700">Validation</text>
+          <text x="182" y="283" fill="#5a6573" font-size="11">walk-forward selection · cost-realism stress · control checks</text>
+          <line x1="380" y1="304" x2="380" y2="332" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
+
+          <rect x="120" y="334" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
+          <circle cx="152" cy="371" r="14" fill="#1c3d5a"/><text x="152" y="376" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">4</text>
+          <text x="182" y="367" fill="#1c3d5a" font-size="14.5" font-weight="700">Review &amp; decision</text>
+          <text x="182" y="389" fill="#5a6573" font-size="11">automated LLM 'economist' review · <tspan fill="#1c3d5a" font-weight="700">human-approved</tspan> decision sheet</text>
+          <line x1="380" y1="410" x2="380" y2="438" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
+
+          <rect x="120" y="440" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
+          <circle cx="152" cy="477" r="14" fill="#1c3d5a"/><text x="152" y="482" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">5</text>
+          <text x="182" y="473" fill="#1c3d5a" font-size="14.5" font-weight="700">Gated execution</text>
+          <text x="182" y="495" fill="#5a6573" font-size="11"><tspan fill="#1c3d5a" font-weight="700">risk-gated</tspan> automatic execution with hard loss limits</text>
+        </svg>
+      </div>
+      <ul class="demonstrates">
+        <li><b>End-to-end systems engineering</b> — from data and research through validation and gated execution.</li>
+        <li><b>Research integrity</b> — point-in-time data and walk-forward validation to guard against look-ahead bias and overfitting.</li>
+        <li><b>Risk-first design</b> — hard loss limits and staged go-live gates before any real capital.</li>
+        <li><b>Human + AI workflow</b> — automated LLM review augments the analysis; a human approves before execution.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="erow"><span class="org">National University of Singapore <span class="loc">— Singapore</span></span><span class="date">Aug 2025 – Dec 2026</span></div>
+      <div class="role">MSc Economics (Quantitative Economics track)</div>
+      <div><span class="award">Fee Rebate Recipient AY25/26</span></div>
+      <div class="cw">Coursework: Econometrics, Machine Learning, Portfolio Management, Quantitative Investing (cross-faculty with MSc Financial Engineering)</div>
+    </div>
+
+    <div class="entry">
+      <div class="erow"><span class="org">Bayes Business School, City, University of London <span class="loc">— United Kingdom</span></span><span class="date">Sep 2020 – Sep 2021</span></div>
+      <div class="role">MSc Business Analytics</div>
+      <div><span class="award">Distinction (79.33), Top 1%</span></div>
+      <div class="cw">Coursework: Applied Machine Learning, Quantitative Methods, Network Analytics, Strategic Business Analytics, Revenue Management &amp; Pricing, Applied NLP</div>
+    </div>
+
+    <div class="entry">
+      <div class="erow"><span class="org">Tokyo International University <span class="loc">— Japan</span></span><span class="date">Sep 2016 – Aug 2019</span></div>
+      <div class="role">BA Economics</div>
+      <div><span class="award">Valedictorian (3.794/4.000) — sole graduate qualified for early graduation in cohort</span></div>
+      <div class="cw">Coursework: Econometrics, Game Theory, Machine Learning in Finance &amp; Economics, Investments, Finance, Behavioral Economics</div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>Skills &amp; Certifications</h2>
+    <p><span class="lbl">Technical:</span> Financial Analysis · Risk Management · Quantitative &amp; Portfolio Analysis · Econometrics · Python · R · SQL/PSQL · VBA · Tableau · MongoDB · AWS · GCP · Git</p>
+    <p><span class="lbl">Certifications:</span> Financial Risk Manager (FRM) — Part I passed; Part II candidate (Aug 2026)</p>
+    <p><span class="lbl">Recognition:</span> Liaison Officer to Governor Kazuo Ueda (Bank of Japan), 30th EMEAP Governors' Meeting, Jul 2025 — 1 of 15 appointed · Finalist, 2020 Microsoft Azure / UNDP Hackathon</p>
+    <p><span class="lbl">Languages:</span> Thai (Native), English (Fluent), Japanese (Conversational)</p>
+  </section>
+
+  <section class="notes" id="notes">
+    <h2>Notes</h2>
+    <div class="post">
+      <h3>Why point-in-time macro data matters</h3>
+      <div class="meta">June 2026 · methodology</div>
+      <p>Most macro series are quietly revised after their first release. Backtest a strategy on today's final GDP or inflation prints and you let the model "see" numbers that didn't exist on the decision date — a subtle look-ahead bias that flatters the results.</p>
+      <p>The fix is point-in-time (vintage) data: store what was actually known as of each date, and reconstruct that as-of view for every decision. In my own research stack I keep FRED macro vintages and rebuild the information set per decision date. It's less convenient, and the backtests look worse — which is exactly the point. A strategy that only works on revised data isn't a strategy; it's hindsight.</p>
+    </div>
+  </section>
+    </main>
+  </div>
+
+  <footer>© 2026 Voravich Chaturavichanan · <a href="/legacy/" style="color:#5a6573">previous version</a></footer>
+
+</div>
+</body>
+</html>
