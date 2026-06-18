@@ -160,16 +160,16 @@
       <div class="card">
         <div class="card-top"><h3>TradeAssistant</h3><span class="lock">🔒 Proprietary</span></div>
         <div class="ptag">A self-built systematic trading stack for FX &amp; gold — research through gated auto-execution</div>
-        <p class="desc">An end-to-end pipeline: automated daily data refresh (broker feeds + point-in-time macro vintages), alpha/timing/risk models validated with walk-forward and transaction-cost stress tests, and an automated LLM "economist" review. Execution runs from human-reviewed decision support through to risk-gated automatic execution via an MT5 Expert Advisor with hard loss limits, with a Telegram bot for daily digests and a remote STOP/RESUME kill-switch. The live stack runs unattended on a VPS.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Telegram bot</span><span class="chip">VPS</span><span class="chip">Streamlit</span></div>
-        <div class="pnote">Built to trade the user's own capital — signals, parameters, and performance withheld.</div>
+        <p class="desc">An end-to-end pipeline: automated daily data refresh (broker feeds + point-in-time macro vintages), alpha/timing/risk models validated with walk-forward and transaction-cost stress tests, and an automated LLM "economist" review. Execution runs from human-reviewed decision support through to automatic execution via an MT5 Expert Advisor governed by fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls. The operations path is VPS-hosted, with scheduled refresh, monitoring, Telegram alerts, reconciliation, and S3 backup.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Telegram</span><span class="chip">VPS</span><span class="chip">AWS S3</span><span class="chip">Streamlit</span></div>
+        <div class="pnote">Built to trade my own capital — signals, parameters, and performance intentionally omitted.</div>
       </div>
       <div class="card">
         <div class="card-top"><h3>EquityAssistant</h3><span class="lock">🔒 Proprietary</span></div>
-        <div class="ptag">A long-only ETF portfolio assistant with staged, gated execution</div>
-        <p class="desc">A personal portfolio system on Interactive Brokers built as a staged on-ramp — generated order sheets with manual paper execution, read-only reconciliation, then gated API execution. Includes a portfolio "lab" dashboard for allocation, rebalancing, turnover-cost modeling, and data-quality monitoring, behind explicit, staged execution gates.</p>
+        <div class="ptag">An IBKR paper-trading portfolio automation lab — long/short equity with options overlays</div>
+        <p class="desc">A paper-only automation lab on Interactive Brokers — dry-run by default, with a paper-account allowlist, forward-only ledgers, and broker-validation snapshots (no real capital, and no confirmed paper order yet). Includes a portfolio "lab" dashboard for allocation, rebalancing, turnover-cost modeling, and data-quality monitoring.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">IBKR API</span><span class="chip">pandas</span><span class="chip">Streamlit</span></div>
-        <div class="pnote">Personal portfolio tool — holdings and methodology not disclosed.</div>
+        <div class="pnote">Paper-trading research lab — no real capital; strategy details intentionally omitted.</div>
       </div>
     </div>
 
@@ -206,13 +206,13 @@
           <rect x="120" y="440" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
           <circle cx="152" cy="477" r="14" fill="#1c3d5a"/><text x="152" y="482" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">5</text>
           <text x="182" y="473" fill="#1c3d5a" font-size="14.5" font-weight="700">Gated execution</text>
-          <text x="182" y="495" fill="#5a6573" font-size="11"><tspan fill="#1c3d5a" font-weight="700">risk-gated</tspan> automatic execution with hard loss limits</text>
+          <text x="182" y="495" fill="#5a6573" font-size="11"><tspan fill="#1c3d5a" font-weight="700">fail-closed</tspan> risk gates · per-trade stops · manual halt</text>
         </svg>
       </div>
       <ul class="demonstrates">
         <li><b>End-to-end systems engineering</b> — from data and research through validation and gated execution.</li>
         <li><b>Research integrity</b> — point-in-time data and walk-forward validation to guard against look-ahead bias and overfitting.</li>
-        <li><b>Risk-first design</b> — hard loss limits and staged go-live gates before any real capital.</li>
+        <li><b>Risk-first design</b> — fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls.</li>
         <li><b>Human + AI workflow</b> — automated LLM review augments the analysis; a human approves before execution.</li>
       </ul>
     </div>
