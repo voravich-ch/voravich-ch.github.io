@@ -62,7 +62,8 @@
   .demonstrates { margin:13px 0 0 18px; }
   .demonstrates li { font-size:12.5px; margin-bottom:4px; }
   .demonstrates b { color:var(--accent); }
-  .notes .post { border-left:3px solid var(--accent); padding:2px 0 2px 15px; }
+  .notes .post { border-left:3px solid var(--accent); padding:2px 0 2px 15px; margin-bottom:24px; }
+  .notes .post:last-child { margin-bottom:0; }
   .notes .post h3 { font-size:14.5px; color:var(--accent); }
   .notes .post .meta { font-size:11px; color:var(--muted); margin:2px 0 8px; }
   .notes .post p { font-size:13px; margin-bottom:8px; }
@@ -246,6 +247,33 @@
 
   <section class="notes" id="notes">
     <h2>Notes</h2>
+    <div class="post">
+      <h3>LLMs as research reviewers, not traders</h3>
+      <div class="meta">June 2026 · AI in research</div>
+      <p>There's a lot of noise about AI "making trades." I think that's the wrong job for it. In my own systems, the language model never sizes a position, never executes, and never promotes a strategy. It reviews.</p>
+      <p>What it's genuinely good at is the analyst's grunt work: reading a wall of central-bank language and data releases, summarizing what changed versus expectations, surfacing historical analogues, and flagging where my own reasoning is thin. It's a tireless research assistant that argues with me — not a decision-maker I outsource to.</p>
+      <p>Keeping the model on the research side of the line is deliberate. Execution authority lives in a separate, gated path with hard risk controls; the LLM can inform that path but has no power over it. That separation is the point: I get the speed and breadth of AI over messy, unstructured macro information, while judgment, sizing, and risk stay where they belong.</p>
+      <p>Used this way, AI widens what one person can monitor — without widening what can go wrong.</p>
+    </div>
+
+    <div class="post">
+      <h3>Fail-closed design in financial systems</h3>
+      <div class="meta">June 2026 · systems design</div>
+      <p>In most software, when something breaks the default is to keep going and log the error. In a system that can move money, that instinct is backwards — the safe default is to <em>stop</em>.</p>
+      <p>I build my research and execution tooling to fail <em>closed</em>: if market data is stale, the account identity doesn't match, the model's context is incomplete, or reconciliation doesn't tie out, the system blocks new risk rather than guessing. Doing nothing is a valid — often the correct — action.</p>
+      <p>This inverts a lot of normal engineering habits. It means writing code that distrusts its own inputs, treats every upstream feed as guilty until proven current, and treats "I'm not sure" as a hard stop, not a warning. The hard part isn't the happy path; it's enumerating the failure modes and deciding, in advance, what "safe" means for each.</p>
+      <p>The payoff is a bounded worst case. A system that fails closed can miss an opportunity — but it's far harder for it to be catastrophically wrong about risk.</p>
+    </div>
+
+    <div class="post">
+      <h3>A research result is only as good as its negative controls</h3>
+      <div class="meta">June 2026 · methodology</div>
+      <p>A backtest that looks good tells you almost nothing on its own. The question that matters is: how hard did you try to make it fail?</p>
+      <p>Most of my research time goes into negative controls, not positive results. Before I believe a pattern, I want it to survive walk-forward validation — choose parameters on the past, test on the untouched next slice — plus realistic transaction-cost stress and no-lookahead checks that confirm every decision used only what was knowable at the time. I also run controls designed to produce nothing: random-direction and opposite-signal versions. If those "work," my test is broken — I haven't found anything.</p>
+      <p>The discipline I value most is killing ideas cleanly. It's tempting to tweak until a result appears, but that's just overfitting with extra steps. A result I trust is one that kept working after I stopped helping it.</p>
+      <p>Most ideas don't survive that process. That's the system working, not failing.</p>
+    </div>
+
     <div class="post">
       <h3>Why point-in-time macro data matters</h3>
       <div class="meta">June 2026 · methodology</div>
