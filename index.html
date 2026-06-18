@@ -5,13 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Voravich Chaturavichanan — Finance, Quant &amp; Data Science</title>
 <meta name="description" content="Finance, quantitative research, and data science, with a macro lens from central-bank work. MSc Economics (NUS) candidate, graduating Dec 2026 · Singapore.">
-<!--
-  DRAFT full-site restyle for voravich-ch.github.io — navy system matching the resume.
-  Choices made (veto any): no emoji section headers; profile photo kept; Projects
-  featured but CONFIDENTIALITY-SAFE (no results/code/links). [DRAFT] copy = your sign-off.
-  Profile image uses the absolute URL so it renders in preview; switch to "images/new_profile.jpg"
-  (relative) when you deploy into your repo.
--->
 <style>
   :root { --accent:#1c3d5a; --ink:#1a1a1a; --muted:#5a6573; --line:#e3e7ec; --chip:#eef2f6; --bg:#f7f8fa; }
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -109,7 +102,7 @@
     <main class="main">
 
     <div class="about">
-    <p><span class="lead">I work at the intersection of finance, quantitative analysis, and data science,</span> with a <span class="lead">macro</span> lens built inside a central bank. At the Bank of Thailand's Financial Stability Department, I learned to reason about how shocks transmit through the financial system and how policy responds — on analysis that reached senior decision-makers. My background in data science and analytics taught me to build models from messy, real-world data; and in my own projects, I build systematic trading and research systems end to end, turning a market view into a tested signal and the infrastructure that runs it.</p>
+    <p><span class="lead">I work at the intersection of finance, quantitative analysis, and data science,</span> with a <span class="lead">macro</span> lens built inside a central bank. At the Bank of Thailand's Financial Stability Department, I learned to reason about how shocks transmit through the financial system and how policy responds — on analysis that reached senior decision-makers. My background in data science and analytics taught me to build models from messy, real-world data; and in my own projects, I build systematic trading and research systems end to end, turning financial hypotheses into tested, auditable research workflows and the infrastructure that runs them.</p>
   </div>
 
   <section id="experience">
@@ -158,16 +151,16 @@
     <h2>Projects</h2>
     <div class="grid">
       <div class="card">
-        <div class="card-top"><h3>TradeAssistant</h3><span class="lock">🔒 Proprietary</span></div>
+        <div class="card-top"><h3>TradeAssistant</h3><span class="lock">🔒 Private build</span></div>
         <div class="ptag">A self-built systematic trading stack for FX &amp; gold — research through gated auto-execution</div>
         <p class="desc">An end-to-end pipeline: automated daily data refresh (broker feeds + point-in-time macro vintages), alpha/timing/risk models validated with walk-forward and transaction-cost stress tests, and an automated LLM "economist" review. Execution runs from human-reviewed decision support through to automatic execution via an MT5 Expert Advisor governed by fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls. The operations path is VPS-hosted, with scheduled refresh, monitoring, Telegram alerts, reconciliation, and S3 backup.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Telegram</span><span class="chip">VPS</span><span class="chip">AWS S3</span><span class="chip">Streamlit</span></div>
-        <div class="pnote">Built to trade my own capital — signals, parameters, and performance intentionally omitted.</div>
+        <div class="pnote">Private trading infrastructure — strategy logic, sizing, positions, and performance intentionally omitted.</div>
       </div>
       <div class="card">
-        <div class="card-top"><h3>EquityAssistant</h3><span class="lock">🔒 Proprietary</span></div>
-        <div class="ptag">An IBKR paper-trading portfolio automation lab — long/short equity with options overlays</div>
-        <p class="desc">A paper-only automation lab on Interactive Brokers — dry-run by default, with a paper-account allowlist, forward-only ledgers, and broker-validation snapshots (no real capital, and no confirmed paper order yet). Includes a portfolio "lab" dashboard for allocation, rebalancing, turnover-cost modeling, and data-quality monitoring.</p>
+        <div class="card-top"><h3>EquityAssistant</h3><span class="lock">🔒 Private build</span></div>
+        <div class="ptag">An IBKR paper-trading portfolio automation lab — long/short equity with options-aware accounting and overlay research</div>
+        <p class="desc">A paper-only automation lab on Interactive Brokers — dry-run by default, with paper-account allowlisting, forward-only ledgers, and broker-validation snapshot tooling (no real capital). Includes a portfolio "lab" dashboard for allocation, rebalancing, turnover-cost modeling, and data-quality monitoring.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">IBKR API</span><span class="chip">pandas</span><span class="chip">Streamlit</span></div>
         <div class="pnote">Paper-trading research lab — no real capital; strategy details intentionally omitted.</div>
       </div>
@@ -188,7 +181,7 @@
           <rect x="120" y="122" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
           <circle cx="152" cy="159" r="14" fill="#1c3d5a"/><text x="152" y="164" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">2</text>
           <text x="182" y="155" fill="#1c3d5a" font-size="14.5" font-weight="700">Research &amp; modeling</text>
-          <text x="182" y="177" fill="#5a6573" font-size="11">feature engineering · alpha, timing &amp; risk models</text>
+          <text x="182" y="177" fill="#5a6573" font-size="11">feature engineering · model research · risk controls</text>
           <line x1="380" y1="198" x2="380" y2="226" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
 
           <rect x="120" y="228" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
@@ -200,7 +193,7 @@
           <rect x="120" y="334" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
           <circle cx="152" cy="371" r="14" fill="#1c3d5a"/><text x="152" y="376" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">4</text>
           <text x="182" y="367" fill="#1c3d5a" font-size="14.5" font-weight="700">Review &amp; decision</text>
-          <text x="182" y="389" fill="#5a6573" font-size="11">automated LLM 'economist' review · <tspan fill="#1c3d5a" font-weight="700">human-approved</tspan> decision sheet</text>
+          <text x="182" y="389" fill="#5a6573" font-size="11">automated LLM 'economist' review · <tspan fill="#1c3d5a" font-weight="700">human-reviewable</tspan> decision sheet</text>
           <line x1="380" y1="410" x2="380" y2="438" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
 
           <rect x="120" y="440" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
@@ -213,7 +206,7 @@
         <li><b>End-to-end systems engineering</b> — from data and research through validation and gated execution.</li>
         <li><b>Research integrity</b> — point-in-time data and walk-forward validation to guard against look-ahead bias and overfitting.</li>
         <li><b>Risk-first design</b> — fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls.</li>
-        <li><b>Human + AI workflow</b> — automated LLM review augments the analysis; a human approves before execution.</li>
+        <li><b>Human + AI workflow</b> — LLM review augments the workflow; execution authority stays isolated to the gated EA path.</li>
       </ul>
     </div>
   </section>
