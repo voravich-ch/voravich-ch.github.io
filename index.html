@@ -84,7 +84,7 @@
 
   <div class="layout">
     <aside class="sidebar">
-      <img src="images/new_profile.jpg" alt="Voravich Chaturavichanan">
+      <img src="https://voravich-ch.github.io/images/new_profile.jpg" alt="Voravich Chaturavichanan">
       <h1>Voravich Chaturavichanan</h1>
       <div class="tagline">Economics · Quantitative Research · Financial Markets<br>MSc Economics (NUS), graduating Dec 2026 · Singapore</div>
       <div class="contact">
@@ -111,7 +111,7 @@
 
     <div class="entry">
       <div class="erow"><span class="org">Bank of Thailand <span class="loc">— Thailand</span></span><span class="date">Nov 2022 – Jul 2025</span></div>
-      <div class="role">Senior Analyst, Financial Stability Department (promoted Jul 2025)</div>
+      <div class="role">Senior Analyst, Financial Stability Department</div>
       <ul>
         <li>Monitored a portfolio of systemically important corporates to detect early signs of financial stress, engaging banks and corporates to prevent systemic spillovers</li>
         <li>Investigated financial events and traced transmission linkages threatening Thailand's financial stability, producing insights that informed supervisory and policy discussions up to the Deputy Governor (Financial Institutions Stability)</li>
@@ -135,7 +135,6 @@
       <ul>
         <li>Developed a CNN computer-vision model to classify food images, doubling the number of classes and lifting F1-score 5% over the incumbent model</li>
         <li>Built a collaborative-filtering recommender for restaurant recommendations that outperformed the existing model and was deployed to production</li>
-        <li>Optimized KPI dashboards with denormalized SQL tables, materially cutting the compute cost of complex metric calculations</li>
       </ul>
     </div>
 
@@ -154,8 +153,8 @@
       <div class="card">
         <div class="card-top"><h3>TradeAssistant</h3><span class="lock">🔒 Private build</span></div>
         <div class="ptag">A self-built systematic trading stack for FX &amp; gold — research through gated auto-execution</div>
-        <p class="desc">An end-to-end pipeline: automated daily data refresh (broker feeds + point-in-time macro vintages), alpha/timing/risk models validated with walk-forward and transaction-cost stress tests, and an automated LLM "economist" review. Execution runs from human-reviewed decision support through to automatic execution via an MT5 Expert Advisor governed by fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls. The operations path is VPS-hosted, with scheduled refresh, monitoring, Telegram alerts, reconciliation, and S3 backup.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Telegram</span><span class="chip">VPS</span><span class="chip">AWS S3</span><span class="chip">Streamlit</span></div>
+        <p class="desc">An end-to-end pipeline: automated daily data refresh (broker feeds + point-in-time macro vintages), alpha/timing/risk models validated with walk-forward selection and transaction-cost stress tests, and an automated LLM "economist" review. Beyond backtesting, it continuously collects forward/live data to track out-of-sample behavior. Execution runs from human-reviewed decision support through to automatic execution via an MT5 Expert Advisor governed by fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls. It runs as a scheduled, always-on hosted service with monitoring, alerting, automated reconciliation, off-site backup, and private authenticated access to the dashboard.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Streamlit</span><span class="chip">VPS</span><span class="chip">AWS S3</span><span class="chip">alerting</span><span class="chip">private access</span></div>
         <div class="pnote">Private trading infrastructure — strategy logic, sizing, positions, and performance intentionally omitted.</div>
       </div>
       <div class="card">
@@ -205,7 +204,7 @@
       </div>
       <ul class="demonstrates">
         <li><b>End-to-end systems engineering</b> — from data and research through validation and gated execution.</li>
-        <li><b>Research integrity</b> — point-in-time data and walk-forward validation to guard against look-ahead bias and overfitting.</li>
+        <li><b>Research integrity</b> — point-in-time data, walk-forward validation, and live out-of-sample tracking to guard against look-ahead bias and overfitting.</li>
         <li><b>Risk-first design</b> — fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls.</li>
         <li><b>Human + AI workflow</b> — LLM review augments the workflow; execution authority stays isolated to the gated EA path.</li>
       </ul>
@@ -226,7 +225,7 @@
       <div class="erow"><span class="org">Bayes Business School, City, University of London <span class="loc">— United Kingdom</span></span><span class="date">Sep 2020 – Sep 2021</span></div>
       <div class="role">MSc Business Analytics</div>
       <div><span class="award">Distinction (79.33), Top 1%</span></div>
-      <div class="cw">Coursework: Applied Machine Learning, Quantitative Methods, Network Analytics, Strategic Business Analytics, Revenue Management &amp; Pricing, Applied NLP</div>
+      <div class="cw">Coursework: Applied Machine Learning, Quantitative Methods, Network Analytics, Applied NLP</div>
     </div>
 
     <div class="entry">
