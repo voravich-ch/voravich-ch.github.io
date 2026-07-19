@@ -3,12 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voravich Chaturavichanan — Finance, Quant &amp; Data Science</title>
+<title>Voravich Chaturavichanan | Finance, Quant &amp; Data Science</title>
 <meta name="description" content="Finance, quantitative research, and data science, with a macro lens from central-bank work. MSc Economics (NUS) candidate, graduating Dec 2026 · Singapore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
 <style>
-  :root { --accent:#1c3d5a; --ink:#1a1a1a; --muted:#5a6573; --line:#e3e7ec; --chip:#eef2f6; --bg:#f7f8fa; }
+  :root { --accent:#1c3d5a; --ink:#1a1a1a; --muted:#68717a; --line:#dfe3e8; --chip:#eef1f5; --bg:#f6f6f6; --gold:#96700a; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:"Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  body { font-family:"Inter","Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; -webkit-font-smoothing:antialiased; }
   html { scroll-behavior:smooth; }
   .wrap { max-width:1180px; margin:0 auto; background:#fff; padding:40px 44px; }
   .layout { display:grid; grid-template-columns:280px 1fr; gap:46px; align-items:start; }
@@ -17,58 +21,73 @@
   /* Sidebar */
   .sidebar { position:sticky; top:34px; text-align:center; border-right:1px solid var(--line); padding-right:30px; }
   .sidebar img { width:128px; height:128px; border-radius:50%; object-fit:cover; border:2px solid var(--accent); }
-  h1 { font-family:Georgia,serif; font-size:23px; color:var(--accent); letter-spacing:.4px; margin-top:14px; line-height:1.2; }
-  .tagline { font-size:12.5px; color:var(--muted); margin-top:8px; font-style:italic; line-height:1.45; }
+  h1 { font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:24px; color:var(--accent); letter-spacing:.4px; margin-top:14px; line-height:1.25; }
+  .tagline { font-size:13px; color:var(--muted); margin-top:8px; font-style:italic; line-height:1.5; }
   .contact { margin-top:14px; display:flex; flex-direction:column; gap:7px; }
-  .contact a { font-size:12px; text-decoration:none; color:var(--accent); border:1px solid #d4dbe3; border-radius:6px; padding:6px 10px; }
-  .contact a:hover { background:var(--chip); }
+  .contact a { display:flex; align-items:center; justify-content:center; gap:7px; font-size:13px; text-decoration:none; color:var(--accent); border:1px solid #d4dbe3; border-radius:6px; padding:6px 10px; transition:background .15s ease, border-color .15s ease, transform .15s ease; }
+  .contact a:hover { background:var(--chip); border-color:var(--accent); transform:translateY(-1px); }
+  .contact a svg { flex:none; opacity:.85; }
   .nav { margin-top:18px; display:flex; flex-direction:column; gap:2px; border-top:1px solid var(--line); padding-top:14px; }
-  .nav a { font-size:12.5px; text-decoration:none; color:var(--muted); padding:5px 8px; border-radius:6px; }
+  .nav a { font-size:13px; text-decoration:none; color:var(--muted); padding:5px 8px; border-radius:6px; transition:color .15s ease, background .15s ease; }
   .nav a:hover { color:var(--accent); background:var(--chip); }
   /* Sections */
   section { margin-top:30px; }
-  h2 { font-family:Georgia,serif; font-size:18px; color:var(--accent); letter-spacing:.5px; border-bottom:1.5px solid var(--accent); padding-bottom:6px; margin-bottom:14px; }
+  h2 { font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:19px; color:var(--accent); letter-spacing:.5px; border-bottom:1.5px solid var(--accent); padding-bottom:6px; margin-bottom:14px; }
   .entry { margin-bottom:16px; }
   .erow { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
-  .org { font-weight:700; font-size:14.5px; }
-  .loc { color:var(--muted); font-weight:400; font-size:12.5px; }
-  .date { color:var(--muted); font-size:12.5px; white-space:nowrap; }
-  .role { font-style:italic; color:#333; font-size:13.5px; margin-bottom:4px; }
+  .org { font-weight:700; font-size:15px; }
+  .loc { color:var(--muted); font-weight:400; font-size:13px; }
+  .date { color:var(--muted); font-size:13px; white-space:nowrap; }
+  .role { font-style:italic; color:#333; font-size:14px; margin-bottom:4px; }
   ul { margin:4px 0 0 18px; }
-  ul li { font-size:13px; margin-bottom:3px; }
-  .award { color:var(--accent); font-weight:700; }
-  .cw { color:var(--muted); font-size:12.5px; margin-top:2px; }
+  ul li { font-size:13.5px; margin-bottom:3px; }
+  .award { color:var(--accent); font-weight:700; font-size:13.5px; }
+  .cw { color:var(--muted); font-size:13px; margin-top:2px; }
   /* Projects */
   .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .card { border:1px solid var(--line); border-radius:10px; padding:16px; display:flex; flex-direction:column; background:#fff; }
+  .card { border:1px solid var(--line); border-radius:10px; padding:16px; display:flex; flex-direction:column; background:#fff; box-shadow:0 1px 2px rgba(16,24,40,.04); transition:box-shadow .15s ease, transform .15s ease; }
+  .card:hover { box-shadow:0 4px 14px rgba(16,24,40,.07); transform:translateY(-1px); }
   .card-top { display:flex; justify-content:space-between; align-items:center; }
-  .card h3 { font-size:15.5px; color:var(--accent); }
-  .lock { font-size:9.5px; font-weight:700; color:var(--accent); background:var(--chip); border:1px solid #d4dbe3; border-radius:20px; padding:2px 9px; }
-  .ptag { font-size:12px; font-style:italic; color:var(--muted); margin:3px 0 8px; }
-  .card p.desc { font-size:12.5px; margin-bottom:10px; }
+  .card h3 { font-size:16px; color:var(--accent); }
+  .lock { display:inline-flex; align-items:center; gap:4px; font-size:10px; font-weight:700; color:var(--accent); background:var(--chip); border:1px solid #d4dbe3; border-radius:20px; padding:2px 9px; }
+  .lock svg { flex:none; }
+  .ptag { font-size:12.5px; font-style:italic; color:var(--muted); margin:3px 0 8px; }
+  .card p.desc { font-size:13.5px; margin-bottom:10px; }
   .draft { color:#b25b00; font-weight:600; }
   .chips { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:11px; }
-  .chip { font-size:10px; background:var(--chip); color:#3a4654; border-radius:5px; padding:3px 8px; }
-  .pnote { margin-top:auto; font-size:10.5px; color:var(--muted); border-top:1px dashed var(--line); padding-top:8px; }
+  .chip { font-size:10.5px; background:var(--chip); color:#3a4654; border-radius:5px; padding:3px 8px; }
+  .pnote { margin-top:auto; font-size:11px; color:var(--muted); border-top:1px dashed var(--line); padding-top:8px; }
   /* Skills */
-  .skills p { font-size:13px; margin-bottom:5px; }
+  .skills p { font-size:13.5px; margin-bottom:5px; }
   .skills .lbl { font-weight:700; }
-  .about { margin-top:24px; font-size:14px; color:#2a2f36; line-height:1.62; }
+  .about { margin-top:24px; font-size:15px; color:#2a2f36; line-height:1.65; }
   .about .lead { font-weight:700; color:var(--accent); }
   .deepdive { margin-top:22px; }
-  .deepdive h4 { font-size:12.5px; color:var(--accent); font-weight:700; letter-spacing:.4px; text-transform:uppercase; margin-bottom:10px; }
-  .diagram { border:1px solid var(--line); border-radius:10px; padding:16px 14px; background:#fff; }
-  .diagram svg { width:100%; height:auto; display:block; }
-  .demonstrates { margin:13px 0 0 18px; }
-  .demonstrates li { font-size:12.5px; margin-bottom:4px; }
-  .demonstrates b { color:var(--accent); }
+  .deepdive h4 { font-size:13px; color:var(--accent); font-weight:700; letter-spacing:.4px; text-transform:uppercase; margin-bottom:10px; }
+  .arch { border:1px solid var(--line); border-radius:10px; padding:30px 32px; background:#fff; }
+  .arch-zone { border-left:3px solid var(--accent); padding:4px 0 4px 24px; margin-bottom:22px; }
+  .arch-zone--execution { border-left-color:var(--gold); margin-bottom:0; }
+  .arch-zone-label { font-size:13.5px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+  .arch-zone--execution .arch-zone-label { color:var(--gold); }
+  .arch-stage { display:flex; gap:16px; padding:12px 0; position:relative; }
+  .arch-stage:not(:last-child)::after { content:""; position:absolute; left:18px; top:34px; bottom:-10px; width:1px; background:var(--line); }
+  .arch-tag { flex:none; width:38px; height:26px; display:flex; align-items:center; justify-content:center; font-size:12.5px; font-weight:700; background:#fff; border:1px solid var(--accent); color:var(--accent); border-radius:4px; position:relative; z-index:1; }
+  .arch-zone--execution .arch-tag { border-color:var(--gold); color:var(--gold); }
+  .arch-stage strong { display:block; font-size:16px; color:var(--ink); margin-bottom:3px; }
+  .arch-stage p { font-size:14px; color:var(--muted); }
+  .arch-note { font-weight:400; color:var(--muted); font-size:0.8em; }
   .notes .post { border-left:3px solid var(--accent); padding:2px 0 2px 15px; margin-bottom:24px; }
   .notes .post:last-child { margin-bottom:0; }
-  .notes .post h3 { font-size:14.5px; color:var(--accent); }
-  .notes .post .meta { font-size:11px; color:var(--muted); margin:2px 0 8px; }
-  .notes .post p { font-size:13px; margin-bottom:8px; }
-  .notes .post .more { font-size:12px; font-style:italic; color:var(--muted); }
-  footer { margin-top:30px; border-top:1px solid var(--line); padding-top:12px; font-size:11px; color:var(--muted); text-align:center; }
+  .notes .post h3 { font-size:15px; color:var(--accent); }
+  .notes .post .meta { font-size:11.5px; color:var(--muted); margin:2px 0 8px; }
+  .notes .post p { font-size:14px; margin-bottom:8px; }
+  .notes .post .more { font-size:12.5px; font-style:italic; color:var(--muted); }
+  footer { margin-top:30px; border-top:1px solid var(--line); padding-top:12px; font-size:11.5px; color:var(--muted); text-align:center; }
+  .reveal { opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.is-visible { opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){
+    .reveal { opacity:1; transform:none; transition:none; }
+  }
   @media (max-width:760px){
     .wrap{ padding:26px 20px; }
     .layout{ grid-template-columns:1fr; gap:22px; }
@@ -86,11 +105,11 @@
     <aside class="sidebar">
       <img src="https://voravich-ch.github.io/images/new_profile.jpg" alt="Voravich Chaturavichanan">
       <h1>Voravich Chaturavichanan</h1>
-      <div class="tagline">Economics · Quantitative Research · Financial Markets<br>MSc Economics (NUS), graduating Dec 2026 · Singapore</div>
+      <div class="tagline">Macro Research · Quantitative Modeling · Financial Markets<br>MSc Economics (Quantitative Economics track), NUS, graduating Dec 2026 · Singapore</div>
       <div class="contact">
-        <a href="mailto:voravich.ch@gmail.com">voravich.ch@gmail.com</a>
-        <a href="https://www.linkedin.com/in/voravich-ch/">LinkedIn</a>
-        <a href="https://github.com/voravich-ch">GitHub</a>
+        <a href="mailto:voravich.ch@gmail.com"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5L8 9l5.5-4.5"/></svg>voravich.ch@gmail.com</a>
+        <a href="https://www.linkedin.com/in/voravich-ch/"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="13" height="13" rx="2.5"/><line x1="5" y1="6.7" x2="5" y2="11.3"/><circle cx="5" cy="4.3" r=".2" fill="currentColor" stroke="none"/><path d="M8 11.3V7.2M8 7.2c0-.7.6-1 1.3-1 1 0 1.4.6 1.4 1.6v3.5"/></svg>LinkedIn</a>
+        <a href="https://github.com/voravich-ch"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5.5,4.5 2,8 5.5,11.5"/><polyline points="10.5,4.5 14,8 10.5,11.5"/></svg>GitHub</a>
       </div>
       <nav class="nav">
         <a href="#experience">Experience</a>
@@ -102,182 +121,174 @@
     </aside>
     <main class="main">
 
-    <div class="about">
+    <div class="about reveal">
     <p><span class="lead">I work at the intersection of finance, quantitative analysis, and data science,</span> with a <span class="lead">macro</span> lens built inside a central bank. At the Bank of Thailand's Financial Stability Department, I learned to reason about how shocks transmit through the financial system and how policy responds — on analysis that reached senior decision-makers. My background in data science and analytics taught me to build models from messy, real-world data; and in my own projects, I build systematic trading and research systems end to end, turning financial hypotheses into tested, auditable research workflows and the infrastructure that runs them.</p>
   </div>
 
-  <section id="experience">
+  <section id="experience" class="reveal">
     <h2>Experience</h2>
 
     <div class="entry">
-      <div class="erow"><span class="org">Bank of Thailand <span class="loc">— Thailand</span></span><span class="date">Nov 2022 – Jul 2025</span></div>
-      <div class="role">Senior Analyst, Financial Stability Department</div>
+      <div class="erow"><span class="org">Bank of Thailand <span class="loc">(Thailand)</span></span><span class="date">Nov 2022 – Jul 2025</span></div>
+      <div class="role">Financial Stability Analyst → Senior Financial Stability Analyst</div>
       <ul>
-        <li>Monitored a portfolio of systemically important corporates to detect early signs of financial stress, engaging banks and corporates to prevent systemic spillovers</li>
-        <li>Investigated financial events and traced transmission linkages threatening Thailand's financial stability, producing insights that informed supervisory and policy discussions up to the Deputy Governor (Financial Institutions Stability)</li>
-        <li>Designed a suite of forward-looking risk indicators (liquidity, leverage, performance) using statistical and machine-learning methods, generating early-warning signals for senior management</li>
-        <li>Re-engineered a multi-day manual reporting workflow into a one-click automated Python/Excel pipeline (LET, FILTER, VBA), cutting turnaround from days to a single batch run; won the <span class="award">Governor's Award for Innovation</span></li>
+        <li>Monitored a portfolio of systemically important corporates to detect early signs of financial stress, <strong>engaging banks and corporates to prevent systemic spillovers</strong></li>
+        <li>Contributed to the writing team for the Bank of Thailand's Financial Stability Report (2024) and Financial Stability Review (2024, 2025), and <strong>served on the English translation team for all three editions</strong></li>
+        <li><strong>Traced transmission linkages threatening Thailand's financial stability</strong>, producing insights that informed supervisory and policy discussions up to the Deputy Governor (Financial Institutions Stability)</li>
+        <li>Designed a suite of <strong>forward-looking risk indicators (liquidity, leverage, performance)</strong> using statistical and machine-learning methods, generating early-warning signals for senior management</li>
+        <li>Automated the team's bi-weekly credit-rating surveillance reporting (collection, processing, visualization) into a one-click Python/Excel pipeline, <strong>cutting ~8 hours of manual work to under 10 minutes per cycle</strong>; won the <span class="award">Governor's Award for Innovation</span></li>
       </ul>
     </div>
 
     <div class="entry">
-      <div class="erow"><span class="org">Bayes Business School <span class="loc">— United Kingdom</span></span><span class="date">Oct 2021 – Sep 2022</span></div>
+      <div class="erow"><span class="org">Bayes Business School <span class="loc">(United Kingdom)</span></span><span class="date">Oct 2021 – Sep 2022</span></div>
       <div class="role">Research Assistant to Dr. Simone Santoni, Strategy Group</div>
       <ul>
         <li>Applied NLP to product-review data to analyze cognitive processes, contributing insights on consumer behavior toward cultural-product evaluation</li>
-        <li>Built data crawlers across 11 platforms to assemble a comprehensive user-and-product dataset, expanding the group's research capabilities</li>
+        <li>Built data crawlers across <strong>11 platforms</strong> to assemble a comprehensive user-and-product dataset, expanding the group's research capabilities</li>
       </ul>
     </div>
 
     <div class="entry">
-      <div class="erow"><span class="org">LINE MAN Wongnai <span class="loc">— Thailand</span></span><span class="date">Feb 2020 – Jun 2020</span></div>
+      <div class="erow"><span class="org">LINE MAN Wongnai <span class="loc">(Thailand)</span></span><span class="date">Feb 2020 – Jun 2020</span></div>
       <div class="role">Data Scientist Intern</div>
       <ul>
-        <li>Developed a CNN computer-vision model to classify food images, doubling the number of classes and lifting F1-score 5% over the incumbent model</li>
-        <li>Built a collaborative-filtering recommender for restaurant recommendations that outperformed the existing model and was deployed to production</li>
+        <li>Developed a CNN computer-vision model to classify food images, <strong>doubling the number of classes and lifting F1-score 5%</strong> over the incumbent model</li>
+        <li>Built a collaborative-filtering recommender for restaurant recommendations that outperformed the existing model and was <strong>deployed to production</strong></li>
       </ul>
     </div>
 
     <div class="entry">
-      <div class="erow"><span class="org">Bank of Thailand <span class="loc">— Thailand</span></span><span class="date">Jan 2019 – Feb 2019</span></div>
+      <div class="erow"><span class="org">Bank of Thailand <span class="loc">(Thailand)</span></span><span class="date">Jan 2019 – Feb 2019</span></div>
       <div class="role">Foreign Exchange Analyst Intern</div>
       <ul>
-        <li>Researched Thai Baht outperformance vs. regional currencies with multiple regression, finding evidence of safe-haven characteristics that supported capital-flow management policy</li>
+        <li>Researched Thai Baht outperformance vs. regional currencies with multiple regression, <strong>finding evidence of safe-haven characteristics</strong> that supported capital-flow management policy</li>
       </ul>
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="reveal">
     <h2>Projects</h2>
     <div class="grid">
       <div class="card">
-        <div class="card-top"><h3>TradeAssistant</h3><span class="lock">🔒 Private build</span></div>
-        <div class="ptag">A self-built systematic trading stack for FX &amp; gold — research through gated auto-execution</div>
-        <p class="desc">An end-to-end pipeline: automated daily data refresh (broker feeds + point-in-time macro vintages), alpha/timing/risk models validated with walk-forward selection and transaction-cost stress tests, and an automated LLM "economist" review. Beyond backtesting, it continuously collects forward/live data to track out-of-sample behavior. Execution runs from human-reviewed decision support through to automatic execution via an MT5 Expert Advisor governed by fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls. It runs as a scheduled, always-on hosted service with monitoring, alerting, automated reconciliation, off-site backup, and private authenticated access to the dashboard.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Streamlit</span><span class="chip">VPS</span><span class="chip">AWS S3</span><span class="chip">alerting</span><span class="chip">private access</span></div>
-        <div class="pnote">Private trading infrastructure — strategy logic, sizing, positions, and performance intentionally omitted.</div>
+        <div class="card-top"><h3>TradeAssistant</h3><span class="lock"><svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Private build</span></div>
+        <div class="ptag">A systematic FX &amp; gold research system I designed and run, from data to a demo-gated order plan</div>
+        <p class="desc">A systematic FX &amp; gold research operation I designed and run end to end — data, decision sheet, and risk-capped order plan are generated automatically, with a parallel AI review adding context before I ever see it. Since May 2026 I've pre-registered and tested more than 20 ideas — sizing rules, cost models, macro overlays, even a broad crypto benchmark — using deflated Sharpe ratios and bootstrap resampling to correct for how many I tried; most didn't survive, including that crypto benchmark, which found no validated edge. Right now the whole pipeline is being proven out end to end on a demo account — data through to execution — before any real capital touches it.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Streamlit</span><span class="chip">VPS</span><span class="chip">AWS S3</span><span class="chip">alerting</span></div>
+        <div class="pnote">Private trading infrastructure: strategy logic, sizing, positions, and performance intentionally omitted.</div>
       </div>
       <div class="card">
-        <div class="card-top"><h3>EquityAssistant</h3><span class="lock">🔒 Private build</span></div>
-        <div class="ptag">An IBKR paper-trading portfolio automation lab — long/short equity with options-aware accounting and overlay research</div>
-        <p class="desc">A paper-only automation lab on Interactive Brokers — dry-run by default, with paper-account allowlisting, forward-only ledgers, and broker-validation snapshot tooling (no real capital). Includes a portfolio "lab" dashboard for allocation, rebalancing, turnover-cost modeling, and data-quality monitoring.</p>
+        <div class="card-top"><h3>EquityAssistant</h3><span class="lock"><svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Private build</span></div>
+        <div class="ptag">A long/short equity research lab I'm building for IBKR paper trading, with options-aware accounting and overlay research</div>
+        <p class="desc">A long/short equity research lab in development for an IBKR paper account. I'm designing the allocation, rebalancing, and overlay logic; automation will handle price refreshes, ledger bookkeeping, and data-quality checks once paper trading starts. No real capital will be involved.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">IBKR API</span><span class="chip">pandas</span><span class="chip">Streamlit</span></div>
-        <div class="pnote">Paper-trading research lab — no real capital; strategy details intentionally omitted.</div>
+        <div class="pnote">Paper-trading research lab: no real capital, strategy details intentionally omitted.</div>
       </div>
     </div>
 
     <div class="deepdive">
-      <h4>TradeAssistant — system architecture</h4>
-      <div class="diagram">
-        <svg viewBox="0 0 760 530" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif" role="img" aria-label="TradeAssistant pipeline: data, research and modeling, validation, review and decision, gated execution">
-          <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1c3d5a"/></marker></defs>
-
-          <rect x="120" y="16" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
-          <circle cx="152" cy="53" r="14" fill="#1c3d5a"/><text x="152" y="58" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">1</text>
-          <text x="182" y="49" fill="#1c3d5a" font-size="14.5" font-weight="700">Data</text>
-          <text x="182" y="71" fill="#5a6573" font-size="11">market-data feeds + point-in-time macro vintages</text>
-          <line x1="380" y1="92" x2="380" y2="120" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
-
-          <rect x="120" y="122" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
-          <circle cx="152" cy="159" r="14" fill="#1c3d5a"/><text x="152" y="164" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">2</text>
-          <text x="182" y="155" fill="#1c3d5a" font-size="14.5" font-weight="700">Research &amp; modeling</text>
-          <text x="182" y="177" fill="#5a6573" font-size="11">feature engineering · model research · risk controls</text>
-          <line x1="380" y1="198" x2="380" y2="226" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
-
-          <rect x="120" y="228" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
-          <circle cx="152" cy="265" r="14" fill="#1c3d5a"/><text x="152" y="270" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">3</text>
-          <text x="182" y="261" fill="#1c3d5a" font-size="14.5" font-weight="700">Validation</text>
-          <text x="182" y="283" fill="#5a6573" font-size="11">walk-forward selection · cost-realism stress · control checks</text>
-          <line x1="380" y1="304" x2="380" y2="332" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
-
-          <rect x="120" y="334" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
-          <circle cx="152" cy="371" r="14" fill="#1c3d5a"/><text x="152" y="376" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">4</text>
-          <text x="182" y="367" fill="#1c3d5a" font-size="14.5" font-weight="700">Review &amp; decision</text>
-          <text x="182" y="389" fill="#5a6573" font-size="11">automated LLM 'economist' review · <tspan fill="#1c3d5a" font-weight="700">human-reviewable</tspan> decision sheet</text>
-          <line x1="380" y1="410" x2="380" y2="438" stroke="#1c3d5a" stroke-width="1.6" marker-end="url(#ar)"/>
-
-          <rect x="120" y="440" width="520" height="74" rx="9" fill="#f3f6f9" stroke="#cdd7e1"/>
-          <circle cx="152" cy="477" r="14" fill="#1c3d5a"/><text x="152" y="482" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">5</text>
-          <text x="182" y="473" fill="#1c3d5a" font-size="14.5" font-weight="700">Gated execution</text>
-          <text x="182" y="495" fill="#5a6573" font-size="11"><tspan fill="#1c3d5a" font-weight="700">fail-closed</tspan> risk gates · per-trade stops · manual halt</text>
-        </svg>
+      <h4>TradeAssistant system architecture</h4>
+      <div class="arch" role="img" aria-label="TradeAssistant architecture: data, research and decision sheet, risk-capped order plan, parallel AI context review, execution transport, monitoring and reconciliation">
+        <div class="arch-zone arch-zone--research">
+          <div class="arch-zone-label">Research</div>
+          <div class="arch-stage">
+            <span class="arch-tag">01</span>
+            <div><strong>Data</strong><p>market-data feeds + point-in-time macro vintages</p></div>
+          </div>
+          <div class="arch-stage">
+            <span class="arch-tag">02</span>
+            <div><strong>Research &amp; decision sheet</strong><p>daily candidate sheet from price and structure, frozen early</p></div>
+          </div>
+          <div class="arch-stage">
+            <span class="arch-tag">03</span>
+            <div><strong>Risk-capped order plan</strong><p>deterministic order-plan contract · total-risk and exposure caps</p></div>
+          </div>
+          <div class="arch-stage">
+            <span class="arch-tag">04</span>
+            <div><strong>AI context review <span class="arch-note">(parallel)</span></strong><p>dual AI economist consult · informs me, doesn't gate the order</p></div>
+          </div>
+        </div>
+        <div class="arch-zone arch-zone--execution">
+          <div class="arch-zone-label">Execution</div>
+          <div class="arch-stage">
+            <span class="arch-tag">05</span>
+            <div><strong>Execution transport</strong><p>demo-gated terminal · hard risk caps · kill switch</p></div>
+          </div>
+          <div class="arch-stage">
+            <span class="arch-tag">06</span>
+            <div><strong>Monitoring &amp; reconciliation</strong><p>daily digest · heartbeat · reconciliation checks</p></div>
+          </div>
+        </div>
       </div>
-      <ul class="demonstrates">
-        <li><b>End-to-end systems engineering</b> — from data and research through validation and gated execution.</li>
-        <li><b>Research integrity</b> — point-in-time data, walk-forward validation, and live out-of-sample tracking to guard against look-ahead bias and overfitting.</li>
-        <li><b>Risk-first design</b> — fail-closed risk gates, per-trade stops, equity-floor new-risk blocking, and manual halt controls.</li>
-        <li><b>Human + AI workflow</b> — LLM review augments the workflow; execution authority stays isolated to the gated EA path.</li>
-      </ul>
     </div>
   </section>
 
-  <section id="education">
+  <section id="education" class="reveal">
     <h2>Education</h2>
 
     <div class="entry">
-      <div class="erow"><span class="org">National University of Singapore <span class="loc">— Singapore</span></span><span class="date">Aug 2025 – Dec 2026</span></div>
+      <div class="erow"><span class="org">National University of Singapore <span class="loc">(Singapore)</span></span><span class="date">Aug 2025 – Dec 2026</span></div>
       <div class="role">MSc Economics (Quantitative Economics track)</div>
-      <div><span class="award">Fee Rebate Recipient AY25/26</span></div>
       <div class="cw">Coursework: Econometrics, Machine Learning, Portfolio Management, Quantitative Investing (cross-faculty with MSc Financial Engineering)</div>
     </div>
 
     <div class="entry">
-      <div class="erow"><span class="org">Bayes Business School, City, University of London <span class="loc">— United Kingdom</span></span><span class="date">Sep 2020 – Sep 2021</span></div>
+      <div class="erow"><span class="org">Bayes Business School, City, University of London <span class="loc">(United Kingdom)</span></span><span class="date">Sep 2020 – Sep 2021</span></div>
       <div class="role">MSc Business Analytics</div>
       <div><span class="award">Distinction (79.33), Top 1%</span></div>
       <div class="cw">Coursework: Applied Machine Learning, Quantitative Methods, Network Analytics, Applied NLP</div>
     </div>
 
     <div class="entry">
-      <div class="erow"><span class="org">Tokyo International University <span class="loc">— Japan</span></span><span class="date">Sep 2016 – Aug 2019</span></div>
+      <div class="erow"><span class="org">Tokyo International University <span class="loc">(Japan)</span></span><span class="date">Sep 2016 – Aug 2019</span></div>
       <div class="role">BA Economics</div>
-      <div><span class="award">Valedictorian (3.794/4.000) — sole graduate qualified for early graduation in cohort</span></div>
+      <div><span class="award">Valedictorian (3.794/4.000), sole graduate qualified for early graduation in cohort</span></div>
       <div class="cw">Coursework: Econometrics, Game Theory, Machine Learning in Finance &amp; Economics, Investments, Finance, Behavioral Economics</div>
     </div>
   </section>
 
-  <section class="skills" id="skills">
+  <section class="skills reveal" id="skills">
     <h2>Skills &amp; Certifications</h2>
     <p><span class="lbl">Technical:</span> Financial Analysis · Risk Management · Quantitative &amp; Portfolio Analysis · Econometrics · Python · R · SQL/PSQL · VBA · Tableau · MongoDB · AWS · GCP · Git</p>
-    <p><span class="lbl">Certifications:</span> Financial Risk Manager (FRM) — Part I passed; Part II candidate (Aug 2026)</p>
-    <p><span class="lbl">Recognition:</span> Liaison Officer to Governor Kazuo Ueda (Bank of Japan), 30th EMEAP Governors' Meeting, Jul 2025 — 1 of 15 appointed · Finalist, 2020 Microsoft Azure / UNDP Hackathon</p>
+    <p><span class="lbl">Certifications:</span> Financial Risk Manager (FRM): Part I passed; Part II candidate (Aug 2026)</p>
+    <p><span class="lbl">Recognition:</span> Liaison Officer to Governor Kazuo Ueda (Bank of Japan), 30th EMEAP Governors' Meeting, Jul 2025 (1 of 15 appointed) · Finalist, 2020 Microsoft Azure / UNDP Hackathon</p>
     <p><span class="lbl">Languages:</span> Thai (Native), English (Fluent), Japanese (Conversational)</p>
   </section>
 
-  <section class="notes" id="notes">
+  <section class="notes reveal" id="notes">
     <h2>Notes</h2>
     <div class="post">
-      <h3>LLMs as research reviewers, not traders</h3>
+      <h3>My AI research assistant</h3>
       <div class="meta">June 2026 · AI in research</div>
-      <p>There's a lot of noise about AI "making trades." I think that's the wrong job for it. In my own systems, the language model never sizes a position, never executes, and never promotes a strategy. It reviews.</p>
-      <p>What it's genuinely good at is the analyst's grunt work: reading a wall of central-bank language and data releases, summarizing what changed versus expectations, surfacing historical analogues, and flagging where my own reasoning is thin. It's a tireless research assistant that argues with me — not a decision-maker I outsource to.</p>
-      <p>Keeping the model on the research side of the line is deliberate. Execution authority lives in a separate, gated path with hard risk controls; the LLM can inform that path but has no power over it. That separation is the point: I get the speed and breadth of AI over messy, unstructured macro information, while judgment, sizing, and risk stay where they belong.</p>
-      <p>Used this way, AI widens what one person can monitor — without widening what can go wrong.</p>
+      <p>People assume that when I say "AI-assisted trading system," the AI is the one placing trades. It isn't. In my setup, a language model never sizes a position, never sends an order, and never picks a strategy. I do that.</p>
+      <p>What I actually use it for is the grunt work I'd otherwise do myself every morning: reading through central-bank statements and data releases, summarizing what changed versus expectations, pulling up historical analogues, and pushing back when my own reasoning looks thin. Some mornings it disagrees with me, which is usually more useful than if it just agreed.</p>
+      <p>I keep it there on purpose. Nothing trades that I haven't pre-registered and signed off as a strategy, every order passes hard risk caps I set in advance, and the model has no path around either. It saves me hours of reading dense macro text every day. It doesn't get a vote on risk.</p>
+      <p>That's the whole design: I get through far more research than I could alone, and I still make every call that matters.</p>
     </div>
 
     <div class="post">
       <h3>Fail-closed design in financial systems</h3>
       <div class="meta">June 2026 · systems design</div>
-      <p>In most software, when something breaks the default is to keep going and log the error. In a system that can move money, that instinct is backwards — the safe default is to <em>stop</em>.</p>
-      <p>I build my research and execution tooling to fail <em>closed</em>: if market data is stale, the account identity doesn't match, the model's context is incomplete, or reconciliation doesn't tie out, the system blocks new risk rather than guessing. Doing nothing is a valid — often the correct — action.</p>
-      <p>This inverts a lot of normal engineering habits. It means writing code that distrusts its own inputs, treats every upstream feed as guilty until proven current, and treats "I'm not sure" as a hard stop, not a warning. The hard part isn't the happy path; it's enumerating the failure modes and deciding, in advance, what "safe" means for each.</p>
-      <p>The payoff is a bounded worst case. A system that fails closed can miss an opportunity — but it's far harder for it to be catastrophically wrong about risk.</p>
+      <p>Most software, when something breaks, just logs an error and keeps going. I don't build my trading tools that way, because the thing they touch is money.</p>
+      <p>If market data looks stale, an account identity doesn't match, or a reconciliation check doesn't tie out, I want the system to stop and block new risk rather than guess and hope I catch it later. Most days that means nothing happens, which is fine. Doing nothing is usually the right call when something looks off.</p>
+      <p>Building it this way took more effort than I expected. I had to sit down and actually list out the ways each piece could fail, then decide in advance what "safe" looks like for each one, instead of just handling the cases that came up naturally while coding.</p>
+      <p>The result is a bounded worst case. I can miss a trade because the system was overly cautious. What it can't easily do is keep running through a failure and quietly pile on risk.</p>
     </div>
 
     <div class="post">
       <h3>A research result is only as good as its negative controls</h3>
       <div class="meta">June 2026 · methodology</div>
-      <p>A backtest that looks good tells you almost nothing on its own. The question that matters is: how hard did you try to make it fail?</p>
-      <p>Most of my research time goes into negative controls, not positive results. Before I believe a pattern, I want it to survive walk-forward validation — choose parameters on the past, test on the untouched next slice — plus realistic transaction-cost stress and no-lookahead checks that confirm every decision used only what was knowable at the time. I also run controls designed to produce nothing: random-direction and opposite-signal versions. If those "work," my test is broken — I haven't found anything.</p>
-      <p>The discipline I value most is killing ideas cleanly. It's tempting to tweak until a result appears, but that's just overfitting with extra steps. A result I trust is one that kept working after I stopped helping it.</p>
-      <p>Most ideas don't survive that process. That's the system working, not failing.</p>
+      <p>A backtest that looks good on the first try doesn't tell me much. What I actually want to know is how hard I tried to break it before I believed it.</p>
+      <p>Most of my research hours go into trying to kill my own ideas, not confirming them. Before I trust a pattern, it has to survive walk-forward testing (pick parameters on old data, test on a slice it never saw) plus realistic transaction costs and a check that every decision only used information that actually existed on that date. I also run versions designed to fail: flip the direction, randomize the signal. If those somehow look profitable too, my test is broken, not my strategy good.</p>
+      <p>Since May I've logged more than 20 of these pre-registered tests: sizing rules, execution-cost models, macro overlays, a broad crypto benchmark. Most of them didn't survive, including that crypto benchmark, which found no validated edge — the rest of the crypto lane sits parked until fresh out-of-sample data says otherwise.</p>
+      <p>I used to think that was a bad month of research. Now I think it's the only kind of result worth trusting.</p>
     </div>
 
     <div class="post">
       <h3>Why point-in-time macro data matters</h3>
       <div class="meta">June 2026 · methodology</div>
-      <p>Most macro series are quietly revised after their first release. Backtest a strategy on today's final GDP or inflation prints and you let the model "see" numbers that didn't exist on the decision date — a subtle look-ahead bias that flatters the results.</p>
-      <p>The fix is point-in-time (vintage) data: store what was actually known as of each date, and reconstruct that as-of view for every decision. In my own research stack I keep FRED macro vintages and rebuild the information set per decision date. It's less convenient, and the backtests look worse — which is exactly the point. A strategy that only works on revised data isn't a strategy; it's hindsight.</p>
+      <p>Most macro data gets revised after it's first released (GDP, inflation, the numbers everyone quotes). If you backtest against today's final, revised figures, your model is quietly using information that didn't exist yet on the day it was supposedly deciding. That's look-ahead bias, and it makes results look better than they'd have actually been.</p>
+      <p>So I store point-in-time data instead: what was actually known on each date, not what we know now with hindsight. I keep FRED's vintage releases and rebuild the information set as of each decision date. It's more work, and honestly my backtests got worse the day I switched to it. But that's the number I trust. The other one was measuring how good I am at using information from the future.</p>
     </div>
   </section>
     </main>
@@ -286,5 +297,18 @@
   <footer>© 2026 Voravich Chaturavichanan</footer>
 
 </div>
+<script>
+  var revealEls = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.05 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+</script>
 </body>
 </html>
