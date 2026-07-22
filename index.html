@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voravich Chaturavichanan | Finance, Quant &amp; Data Science</title>
-<meta name="description" content="Finance, quantitative research, and data science, with a macro lens from central-bank work. MSc Economics (NUS) candidate, graduating Dec 2026 · Singapore.">
+<title>Voravich Chaturavichanan | Macro Research · Quantitative Modeling · Financial Markets</title>
+<meta name="description" content="Macro research, quantitative modeling, and financial markets, with a policy lens from central-bank work. Master of Economics (NUS) candidate, graduating Dec 2026 · Singapore.">
 <link rel="canonical" href="https://voravich-ch.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://voravich-ch.github.io/">
-<meta property="og:title" content="Voravich Chaturavichanan — Macro Research · Quantitative Modeling · Financial Markets">
+<meta property="og:title" content="Voravich Chaturavichanan | Macro Research · Quantitative Modeling · Financial Markets">
 <meta property="og:description" content="Experience, two systematic trading research projects, and research notes on methodology: point-in-time data, negative controls, and fail-closed design.">
 <meta property="og:image" content="https://voravich-ch.github.io/images/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Voravich Chaturavichanan — Macro Research · Quantitative Modeling · Financial Markets">
+<meta name="twitter:title" content="Voravich Chaturavichanan | Macro Research · Quantitative Modeling · Financial Markets">
 <meta name="twitter:description" content="Experience, systematic trading research projects, and research notes on methodology.">
 <meta name="twitter:image" content="https://voravich-ch.github.io/images/og-card.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,6 +74,9 @@
   .skills .lbl { font-weight:700; }
   .about { margin-top:24px; font-size:15px; color:#2a2f36; line-height:1.65; }
   .about .lead { font-weight:700; color:var(--accent); }
+  .about-teaser { margin-top:10px; font-size:13px; color:var(--muted); }
+  .about-teaser a { color:var(--accent); font-weight:600; text-decoration:none; }
+  .about-teaser a:hover { text-decoration:underline; }
   .deepdive { margin-top:22px; }
   .deepdive h4 { font-size:13px; color:var(--accent); font-weight:700; letter-spacing:.4px; text-transform:uppercase; margin-bottom:10px; }
   .arch { border:1px solid var(--line); border-radius:10px; padding:30px 32px; background:#fff; }
@@ -104,7 +107,7 @@
     .wrap{ padding:26px 20px; }
     .layout{ grid-template-columns:1fr; gap:22px; }
     .sidebar{ position:static; border-right:none; padding-right:0; border-bottom:2px solid var(--accent); padding-bottom:20px; }
-    .nav{ display:none; }
+    .nav{ flex-direction:row; flex-wrap:wrap; justify-content:center; gap:6px 10px; border-top:none; padding-top:10px; }
     .erow{ flex-direction:column; }
     .grid{ grid-template-columns:1fr; }
   }
@@ -117,7 +120,7 @@
     <aside class="sidebar">
       <img src="https://voravich-ch.github.io/images/new_profile.jpg" alt="Voravich Chaturavichanan">
       <h1>Voravich Chaturavichanan</h1>
-      <div class="tagline">Macro Research · Quantitative Modeling · Financial Markets<br>MSc Economics (Quantitative Economics track), NUS, graduating Dec 2026 · Singapore</div>
+      <div class="tagline">Macro Research · Quantitative Modeling · Financial Markets<br>Master of Economics (Quantitative Economics track), NUS, graduating Dec 2026 · Singapore</div>
       <div class="contact">
         <a href="mailto:voravich.ch@gmail.com"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5L8 9l5.5-4.5"/></svg>voravich.ch@gmail.com</a>
         <a href="https://www.linkedin.com/in/voravich-ch/"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="13" height="13" rx="2.5"/><line x1="5" y1="6.7" x2="5" y2="11.3"/><circle cx="5" cy="4.3" r=".2" fill="currentColor" stroke="none"/><path d="M8 11.3V7.2M8 7.2c0-.7.6-1 1.3-1 1 0 1.4.6 1.4 1.6v3.5"/></svg>LinkedIn</a>
@@ -134,7 +137,8 @@
     <main class="main">
 
     <div class="about reveal">
-    <p><span class="lead">I work at the intersection of finance, quantitative analysis, and data science,</span> with a <span class="lead">macro</span> lens built inside a central bank. At the Bank of Thailand's Financial Stability Department, I learned to reason about how shocks transmit through the financial system and how policy responds — on analysis that reached senior decision-makers. My background in data science and analytics taught me to build models from messy, real-world data; and in my own projects, I build systematic trading and research systems end to end, turning financial hypotheses into tested, auditable research workflows and the infrastructure that runs them.</p>
+    <p><span class="lead">I work at the intersection of macro research, quantitative modeling, and financial markets,</span> grounded in a <span class="lead">policy</span> lens built inside a central bank. At the Bank of Thailand's Financial Stability Department, I learned to reason about how shocks transmit through the financial system and how policy responds, in analysis that reached senior decision-makers. My background in data science and analytics taught me to build models from messy, real-world data; and in my own projects, I build systematic trading and research systems end to end, turning financial hypotheses into tested, auditable research workflows and the infrastructure that runs them.</p>
+    <p class="about-teaser">How I do research: point-in-time data, negative controls, fail-closed execution → <a href="#notes">Notes</a></p>
   </div>
 
   <section id="experience" class="reveal">
@@ -145,8 +149,8 @@
       <div class="role">Financial Stability Analyst → Senior Financial Stability Analyst</div>
       <ul>
         <li>Monitored a portfolio of systemically important corporates to detect early signs of financial stress, <strong>engaging banks and corporates to prevent systemic spillovers</strong></li>
-        <li>Contributed to the writing team for the Bank of Thailand's Financial Stability Report (2024) and Financial Stability Review (2024, 2025), and <strong>served on the English translation team for all three editions</strong></li>
         <li><strong>Traced transmission linkages threatening Thailand's financial stability</strong>, producing insights that informed supervisory and policy discussions up to the Deputy Governor (Financial Institutions Stability)</li>
+        <li>Contributed to <strong>the writing team for the Bank of Thailand's Financial Stability Report (2024) and Financial Stability Review (2024, 2025)</strong>, and served on the English translation team for all three editions</li>
         <li>Designed a suite of <strong>forward-looking risk indicators (liquidity, leverage, performance)</strong> using statistical and machine-learning methods, generating early-warning signals for senior management</li>
         <li>Automated the team's bi-weekly credit-rating surveillance reporting (collection, processing, visualization) into a one-click Python/Excel pipeline, <strong>cutting ~8 hours of manual work to under 10 minutes per cycle</strong>; won the <span class="award">Governor's Award for Innovation</span></li>
       </ul>
@@ -185,13 +189,13 @@
       <div class="card">
         <div class="card-top"><h3>TradeAssistant</h3><span class="lock"><svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Private build</span></div>
         <div class="ptag">A systematic FX &amp; gold research system I designed and run, from data to a demo-gated order plan</div>
-        <p class="desc">A systematic FX &amp; gold research operation I designed and run end to end — data, decision sheet, and risk-capped order plan are generated automatically, with a parallel AI review adding context before I ever see it. Since May 2026 I've pre-registered and tested more than 20 ideas — sizing rules, cost models, macro overlays, even a broad crypto benchmark — using deflated Sharpe ratios and bootstrap resampling to correct for how many I tried; most didn't survive, including that crypto benchmark, which found no validated edge. Right now the whole pipeline is being proven out end to end on a demo account — data through to execution — before any real capital touches it.</p>
+        <p class="desc">A systematic FX &amp; gold research operation I designed and run end to end: data, decision sheet, and risk-capped order plan are generated automatically, with a parallel AI review adding context before I ever see it. Since May 2026 I've pre-registered and tested more than 20 ideas, including sizing rules, cost models, and macro overlays, using deflated Sharpe ratios and bootstrap resampling to correct for how many I tried; most were rejected or not promoted under frozen criteria. Right now the whole pipeline, data through to execution, is being proven out end to end on a demo account before any real capital touches it.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">cTrader / MT5</span><span class="chip">FRED</span><span class="chip">machine learning</span><span class="chip">Claude / LLM</span><span class="chip">Streamlit</span><span class="chip">VPS</span><span class="chip">AWS S3</span><span class="chip">alerting</span></div>
         <div class="pnote">Private trading infrastructure: strategy logic, sizing, positions, and performance intentionally omitted.</div>
       </div>
       <div class="card">
         <div class="card-top"><h3>EquityAssistant</h3><span class="lock"><svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Private build</span></div>
-        <div class="ptag">A long/short equity research lab I'm building for IBKR paper trading, with options-aware accounting and overlay research</div>
+        <div class="ptag">A long/short equity research lab I'm building for IBKR paper trading, with allocation, rebalancing, and overlay research</div>
         <p class="desc">A long/short equity research lab in development for an IBKR paper account. I'm designing the allocation, rebalancing, and overlay logic; automation will handle price refreshes, ledger bookkeeping, and data-quality checks once paper trading starts. No real capital will be involved.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">IBKR API</span><span class="chip">pandas</span><span class="chip">Streamlit</span></div>
         <div class="pnote">Paper-trading research lab: no real capital, strategy details intentionally omitted.</div>
@@ -217,7 +221,7 @@
           </div>
           <div class="arch-stage">
             <span class="arch-tag">04</span>
-            <div><strong>AI context review <span class="arch-note">(parallel)</span></strong><p>dual AI economist consult · informs me, doesn't gate the order</p></div>
+            <div><strong>AI context review <span class="arch-note">(parallel)</span></strong><p>LLM-assisted economist context · informs me, doesn't gate the order</p></div>
           </div>
         </div>
         <div class="arch-zone arch-zone--execution">
@@ -240,7 +244,8 @@
 
     <div class="entry">
       <div class="erow"><span class="org">National University of Singapore <span class="loc">(Singapore)</span></span><span class="date">Aug 2025 – Dec 2026</span></div>
-      <div class="role">MSc Economics (Quantitative Economics track)</div>
+      <div class="role">Master of Economics (Quantitative Economics track)</div>
+      <div class="cw">10-student cohort; coursework taken alongside PhD and MRes Economics candidates, including EC6883 (NUS's PhD research-methods course)</div>
       <div class="cw">Coursework: Econometrics, Machine Learning, Portfolio Management, Quantitative Investing (cross-faculty with MSc Financial Engineering)</div>
     </div>
 
@@ -270,30 +275,31 @@
   <section class="notes reveal" id="notes">
     <h2>Notes</h2>
     <div class="post">
+      <h3>The Sharpe ratio problem nobody mentions</h3>
+      <div class="meta">July 2026 · methodology</div>
+      <p>My coursework teaches the Sharpe ratio as the standard way to judge a strategy: mean excess return divided by volatility. It's a fine number for one backtest. It says nothing about how many backtests you ran to find it.</p>
+      <p>I test a lot of ideas, more than 20 pre-registered hypotheses since May 2026: sizing rules, cost models, macro overlays. If I just report the best Sharpe out of that pile, I've quietly run a multiple-hypothesis test and hidden it. The more variants you try, the more likely one of them looks good by chance alone. A plain Sharpe ratio can't tell "genuinely good" from "got lucky across 20 tries."</p>
+      <p>So the number that actually gates whether a strategy is allowed near real capital isn't the raw Sharpe. It's the <strong>deflated Sharpe ratio</strong> (Bailey &amp; López de Prado): it discounts the observed Sharpe for how many variants I tried, how correlated those trials were, and how far the return distribution sits from the clean, symmetric shape Sharpe assumes. I pair it with bootstrap resampling to get a confidence interval around that number, instead of trusting one point estimate off one sample path.</p>
+      <p>For that confidence interval, I resample whole decision days, not individual trades, and read a 95% band. Trades placed on the same day share the same macro shocks, so treating them as independent draws would understate the true uncertainty and manufacture significance that isn't really there. When a practitioner mentioned in conversation that their desk uses Newey-West (HAC) standard errors instead, I ran the comparison myself. HAC actually came out more favorable on my data. I kept the block-bootstrap approach anyway: switching methods only when one happens to flatter the result defeats the point of having one at all.</p>
+      <p>It's a less flattering number than the one my lecture slides would compute on the same data. That's the point: it's supposed to survive me trying to fool myself.</p>
+    </div>
+
+    <div class="post">
+      <h3>Killing my own good idea</h3>
+      <div class="meta">July 2026 · research process</div>
+      <p>I came across an idea in outside research: a simple weighted scorecard, 0 to 100, for deciding whether a new strategy is worth greenlighting. It looked clean and appealingly objective, so before adopting it I ran it through the same adversarial review I use on my actual trading ideas.</p>
+      <p>It failed the first round. The scorecard quietly dropped any correction for multiple testing: score enough candidates and something clears a high bar by chance alone, the exact mistake the deflated Sharpe ratio exists to catch. Worse, its admission criteria matched the profile of two ideas I'd already tested and found to be false positives; the scorecard would have waved both of them through.</p>
+      <p>One piece of it survived a second look and made it into my process. The rest didn't. I only found out because I was willing to attack my own preferred idea as hard as I'd attack anyone else's.</p>
+      <p>The easiest strategy to approve is always the one you didn't try to break.</p>
+    </div>
+
+    <div class="post">
       <h3>My AI research assistant</h3>
       <div class="meta">June 2026 · AI in research</div>
-      <p>People assume that when I say "AI-assisted trading system," the AI is the one placing trades. It isn't. In my setup, a language model never sizes a position, never sends an order, and never picks a strategy. I do that.</p>
+      <p>People assume that when I say "AI-assisted trading system," the AI is the one placing trades. It isn't. In my setup, a language model never sizes a position, never decides whether to send an order, and never picks a strategy. Those decisions are mine: made and signed off before a trade ever happens, not approved in the moment.</p>
       <p>What I actually use it for is the grunt work I'd otherwise do myself every morning: reading through central-bank statements and data releases, summarizing what changed versus expectations, pulling up historical analogues, and pushing back when my own reasoning looks thin. Some mornings it disagrees with me, which is usually more useful than if it just agreed.</p>
-      <p>I keep it there on purpose. Nothing trades that I haven't pre-registered and signed off as a strategy, every order passes hard risk caps I set in advance, and the model has no path around either. It saves me hours of reading dense macro text every day. It doesn't get a vote on risk.</p>
+      <p>It does flag risk as part of that review: concentration, competing macro drivers, event risk, things worth watching. What it doesn't have is authority: nothing trades that I haven't pre-registered and signed off as a strategy, every order passes hard risk caps I set in advance, and the model has no path to change any of that. It can tell me something looks risky. It can't act on it.</p>
       <p>That's the whole design: I get through far more research than I could alone, and I still make every call that matters.</p>
-    </div>
-
-    <div class="post">
-      <h3>Fail-closed design in financial systems</h3>
-      <div class="meta">June 2026 · systems design</div>
-      <p>Most software, when something breaks, just logs an error and keeps going. I don't build my trading tools that way, because the thing they touch is money.</p>
-      <p>If market data looks stale, an account identity doesn't match, or a reconciliation check doesn't tie out, I want the system to stop and block new risk rather than guess and hope I catch it later. Most days that means nothing happens, which is fine. Doing nothing is usually the right call when something looks off.</p>
-      <p>Building it this way took more effort than I expected. I had to sit down and actually list out the ways each piece could fail, then decide in advance what "safe" looks like for each one, instead of just handling the cases that came up naturally while coding.</p>
-      <p>The result is a bounded worst case. I can miss a trade because the system was overly cautious. What it can't easily do is keep running through a failure and quietly pile on risk.</p>
-    </div>
-
-    <div class="post">
-      <h3>A research result is only as good as its negative controls</h3>
-      <div class="meta">June 2026 · methodology</div>
-      <p>A backtest that looks good on the first try doesn't tell me much. What I actually want to know is how hard I tried to break it before I believed it.</p>
-      <p>Most of my research hours go into trying to kill my own ideas, not confirming them. Before I trust a pattern, it has to survive walk-forward testing (pick parameters on old data, test on a slice it never saw) plus realistic transaction costs and a check that every decision only used information that actually existed on that date. I also run versions designed to fail: flip the direction, randomize the signal. If those somehow look profitable too, my test is broken, not my strategy good.</p>
-      <p>Since May I've logged more than 20 of these pre-registered tests: sizing rules, execution-cost models, macro overlays, a broad crypto benchmark. Most of them didn't survive, including that crypto benchmark, which found no validated edge — the rest of the crypto lane sits parked until fresh out-of-sample data says otherwise.</p>
-      <p>I used to think that was a bad month of research. Now I think it's the only kind of result worth trusting.</p>
     </div>
 
     <div class="post">
